@@ -23,3 +23,7 @@ fos_user_change_password:
 
 pianosolo_weather:
     resource: "@PianoSoloWeatherBundle/Resources/config/routing.yml"
+
+fos_user_registration_confirmed:
+    path:      /
+    defaults:  { _controller: FOSUserBundle:Registration:register }

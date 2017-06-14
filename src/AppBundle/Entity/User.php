@@ -3,7 +3,6 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
 use FOS\UserBundle\Model\User as BaseUser;
 
 /**
@@ -26,14 +25,14 @@ class User extends BaseUser
     /**
      * @var int
      *
-     * @ORM\Column(name="Age", type="integer")
+     * @ORM\Column(name="Age", type="integer", nullable=true)
      */
     protected $age;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="Gender", type="boolean")
+     * @ORM\Column(name="Gender", type="boolean", nullable=true)
      */
     protected $gender;
 
