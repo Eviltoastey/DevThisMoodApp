@@ -13,9 +13,13 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+
+        $weatherService = $this->get('pianosolo.weather');
+        $weather = $weatherService->getCityData('weather', 'Rotterdam', array('param' => ''));
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'weather' => $weather,
         ]);
     }
 }

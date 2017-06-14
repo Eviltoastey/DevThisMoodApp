@@ -67,3 +67,23 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    from_email:
+      address: "MoodApp"
+      sender_name: "marcokoopman1337@gmail.com"
+    user_class: AppBundle\Entity\User
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+
+piano_solo_weather:
+    api_key: "05d5e4397fcc88236953f845495e266a"
+    options:
+        download_csv: false # Default True
+        cache: false # Default False (To use cache the system needs Php-Apc cache)
