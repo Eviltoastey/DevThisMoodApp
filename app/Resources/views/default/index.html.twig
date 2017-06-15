@@ -2,7 +2,35 @@
 
 {% block body %}
     <div class="top">
-    <div class="body-top"></div>
+    <div class="body-top">
+        <div class="content">
+            <div class="col-sm-12 weather-text-container">
+                <div class="onethird align-left">
+                    <h3 class="weather-text">{{ weather.weather[0].main }}</h3>
+                </div>
+                <div class="onethird align-center">
+                    <img class="weather-icon" src="http://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png"/>
+                </div>
+                <div class="onethird align-right">
+                    <h2 class="weather-text">{{ (weather.main.temp - 273.1)|slice(0, 2) }}</h2>°C
+                </div>
+            </div>
+            <div class="col-sm-12 ">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-8">
+                    <div class=" message-container">
+                        <p class="message">dasdsa dsa  dasasd sda dsa dasds  adsds</p>
+                    </div>
+                    <div class="message-button-container">
+                        <div class="accept">V</div><div class="decline">X</div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <div class="bottom">

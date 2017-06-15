@@ -25,6 +25,53 @@ label {
     color: darkgrey;
 }
 
+.weather-text {
+    display: inline-block;
+}
+
+.align-left {
+    text-align: left;
+    float: left;
+}
+
+.align-right {
+    text-align:  right;
+    float: right;
+}
+
+.align-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.half {
+    width: 45%;
+    display: inline-block;
+}
+
+.onethird {
+    width: 33.33%;
+    display: inline-block;
+}
+
+.content {
+    margin-top: 70px;
+}
+
+.weather-text-container {
+    padding: 50px 10px;
+}
+
+.weather-icon-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.weather-icon {
+    width: 125px;
+    height: 125px;
+}
+
 .btn-primary {
     border: none;
     background: #24a1a3;
@@ -44,7 +91,9 @@ html, body {
 
 .top {
     width: 100%;
-    height: 53%;
+    height: 425px;
+    display: flex;
+    flex-flow: column;
 
 }
 
@@ -61,7 +110,9 @@ html, body {
 
 .bottom {
     width: 100%;
-    height: 47%;
+    height: 45%;
+    display: flex;
+    flex-flow: column;
 
 }
 
@@ -88,4 +139,27 @@ html, body {
     width: 100%;
     height: 100%;
     background:         #444e57;
+}
+
+.message-container {
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 15px 0;
+}
+
+.message-button-container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.accept {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
+.decline {
+    display: inline-block;
+    margin: 0 20px;
 }
