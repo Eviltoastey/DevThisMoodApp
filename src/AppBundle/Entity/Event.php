@@ -23,9 +23,41 @@ class Event
     protected $id;
 
     /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @ORM\ManyToOne(targetEntity="User")
      */
-    protected $userId;
+    public $userId;
+
+    /**
+     * @return mixed
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @param mixed $userId
+     */
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
 
     /**
      * @ORM\Column(name="startDate", type="datetime")

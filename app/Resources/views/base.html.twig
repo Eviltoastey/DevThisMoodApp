@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-
+{% if app.user %}
     <nav class="navbar navbar-inverse navbar-default navbar-fixed-top main-navbar">
         <div class="container">
             <div class="">
@@ -23,17 +23,18 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="nav navbar-nav navbar-left">
-                    <img class="navbar--todo-image" src=""/>LOGO
+                    <img class="navbar--todo-image" src=""/>
                 </div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="">Home</a></li>
+                    <li><a href="{{ path("homepage") }}">Home</a></li>
+                    <li><a href="{{ path("event_new") }}">nieuw agenda punt</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
+{% endif %}
 <body>
 {% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}

@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-sm-8">
                     <div class=" message-container">
-                        <p class="message">dasdsa dsa  dasasd sda dsa dasds  adsds</p>
+                        <p class="message">{{ advice }}</p>
                     </div>
                     <div class="message-button-container">
                         <div class="accept">V</div><div class="decline">X</div>
@@ -34,6 +34,35 @@
     </div>
 
     <div class="bottom">
-    <div class="body-bottom"></div>
+        <div class="body-bottom">
+            <div class="col-sm-12">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8 date-container">
+                    <div class="day-txt">
+                        {{ "now"|date("l") }}
+                    </div>
+                    <div class="day-int">
+                        {{ "now"|date("d") }}
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <table class="table-container">
+                        <tbody>
+                        {% for event in events %}
+                            <tr class='table-row clickable-row' data-href='{{ path('event_show', { 'id': event.id }) }}'>
+                                <td>{% if event.startDate %}{{ event.startDate|date('H:i') }}{% endif %}</td>
+                                <td>{{ event.description }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
     </div>
 {% endblock %}

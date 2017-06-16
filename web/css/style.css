@@ -108,6 +108,14 @@ html, body {
     background:         #24a1a3 ;
 }
 
+.full {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    background:         #24a1a3 ;
+}
+
 .bottom {
     width: 100%;
     height: 45%;
@@ -117,7 +125,7 @@ html, body {
 }
 
 .form-middle {
-    margin-top: 400px;
+    margin-top: 200px;
 }
 
 .login--submit {
@@ -156,10 +164,64 @@ html, body {
 .accept {
     display: inline-block;
     margin: 0 20px;
+    color: greenyellow;
+    font-size:16px;
+    cursor:pointer;
 }
 
+.event-new {
+    margin: 100px auto;
+    color: black;
+}
+
+.onesix{
+    width: 10%;
+    display: inline-block;
+}
+
+.input-group-3{
+    display: inline-block;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+}
 
 .decline {
     display: inline-block;
     margin: 0 20px;
+    color:red;
+    font-size:16px;
+    cursor:pointer;
+}
+
+tbody tr {
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+}
+
+td, th {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.table-container {
+    margin: 0 auto;
+}
+
+tbody {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.table-row {
+    cursor: pointer
+}
+
+.date-container {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
 }
