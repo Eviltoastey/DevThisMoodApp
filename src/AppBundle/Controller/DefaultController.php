@@ -57,7 +57,7 @@ class DefaultController extends Controller
                 if($celsius < 18){
                     return "Afspraak inplannen om te gamen " . $user . " ? Het is geen lekker weer. ";
                 } else {
-                    return "Buiten chillen " . $user .  " ? Het is lekker weer.";
+                    return "Hey! Buiten chillen " . $user .  " ? Het is lekker weer.";
                 }
                 break;
             case "Clear":
